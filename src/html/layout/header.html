@@ -1,0 +1,40 @@
+<header class="header">
+	<div data-header class="header__navigation navigation">
+				<div class="container">
+					<div class="navigation__wrapper">
+						@@include('../modules/logo.html', {
+							'class-logo-wrapper': 'navigation__logo',
+							'class-logo-link': 'navigation__logo-link'
+							})
+						<nav class="navigation__nav nav" data-nav>
+							<ul class="nav__list">
+								<li><a href="#contact" class="nav__link">Контакты</a></li>
+								<li class="nav__item-hidden"><a href="tel:+79999999999" class="nav__link">+7 (999) 999-99-99</a></li>
+							</ul>
+						</nav>
+						<div class="navigation__block">
+							<div class="navigation__contactinfo">
+								<div class="navigation__phone phone">
+									<a href="tel:+79999999999" class="phone__link" title="Телефон Шин.Store">+7 (999) 999-99-99</a>
+									<p>Ежедневно с 9:00 до 19:00</p>
+								</div>
+								<div class="navigation__worktime">
+
+								</div>
+							</div>
+							<div class="navigation__social social">
+								<ul class="social__list">
+									<li><a href="https://vk.com/" class="social__link social__link_vk">
+										<img src="../../assets/images/icon/vk.svg" alt="VKontakte" title="PromBetonPol VKontakte">
+									</a></li>
+									<li><a href="https://wa.me/" class="social__link social__link_wa">
+										<img src="../../assets/images/icon/wa.svg" alt="WhatsApp" title="PromBetonPol WhatsApp">
+									</a></li>
+								</ul>
+							</div>
+							@@include('../modules/burger.html', {})
+						</div>
+					</div>
+				</div>
+			</div>
+</header>

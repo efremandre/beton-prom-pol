@@ -1,0 +1,44 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+@use '../modules/logo';
+
+.footer {
+  padding: 2em 0;
+  @include mix.adaptivFont(16, 9);
+  line-height: 1.3em;
+  color: var.$lightColor;
+  background-color: var.$darkColor;
+  & p {
+    margin: 0;
+  }
+
+  &.footer-show {
+
+  }
+
+  &__wrapper {
+    @include mix.displayFlex(flex, space-between, center);
+  }
+
+  &__logo-link {
+    color: var.$lightColor;
+  }
+
+  &__requisites {
+    padding: 0 1em;
+    &>p>a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__author {
+    &>a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

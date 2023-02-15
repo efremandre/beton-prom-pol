@@ -1,0 +1,126 @@
+@use './base/variable' as var;
+@use './base/mixin' as mix;
+@use './base/extentsions';
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 989.98px) {
+
+}
+
+@media screen and (max-width: 769.98px) {
+  .navigation {
+    opacity: 1;
+    &__wrapper {
+      justify-content: space-between;
+    }
+
+    &__logo {
+
+    }
+
+    &__logo-link {
+    }
+
+    &__block {
+      @include mix.displayFlex(flex, start, center);
+      gap: 0 20px;
+    }
+
+    &__phone {
+
+    }
+
+    &__icon {
+    }
+
+    &__link {
+
+    }
+  }
+
+  .phone {
+    &__link {
+      font-size: 14px;
+
+      &:after {
+
+      }
+
+      &:hover {
+
+      }
+    }
+  }
+
+  .contact {
+
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__contact-block {
+      flex: 0 1 100%;
+    }
+
+    &__map-block {
+      flex: 0 1 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 569.98px) {
+  .container {
+    padding: 0 1em;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .navigation {
+    &__phone {
+      display: none;
+    }
+  }
+
+  .fullscreen {
+    &__buttons {
+      width: 100%;
+      gap: 15px;
+    }
+
+    &__button {
+
+    }
+  }
+
+  .contact {
+    &__map {
+      height: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 429.98px) {
+  .fullscreen {
+
+    &__buttons {
+      align-items: start;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 319.98px) {
+  .container {
+    padding: 0 0.5em;
+  }
+}
+
+@media (any-hover: none) and (orientation: landscape) {
+
+}
