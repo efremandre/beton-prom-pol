@@ -91,12 +91,11 @@
       margin-bottom: 1em;
       padding: 1em;
       box-sizing: border-box;
-      color: var.$lightColor;
+      color: var.$generalColorText;
       outline: none;
       border-radius: 5px;
       border: none;
-      border-bottom: 1px solid #fff;
-      background: rgba(10, 10, 10, .9);
+      background: #EEEEEE;
 
       transition: transform .3s ease, box-shadow .3s ease;
 
@@ -104,8 +103,8 @@
       &:-webkit-autofill:hover,
       &:-webkit-autofill:focus,
       &:-webkit-autofill:active {
-        -webkit-box-shadow: 0 0 0 30px var.$darkColor inset !important;
-        -webkit-text-fill-color: var.$lightColor !important;
+        -webkit-box-shadow: 0 0 0 30px #EEEEEE inset !important;
+        -webkit-text-fill-color: #EEEEEE !important;
         -webkit-backdrop-filter: unset;
       }
 

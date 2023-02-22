@@ -11,9 +11,8 @@ $sizeAfterEl: 1.1em;
   top: 0;
   left: 0;
   color: var.$lightColor;
-  background: var.$darkColor;
+  background-color: var.$darkColor;
   box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.5);
-  opacity: .8;
   transition: transform .8s ease;
 
   &._hidden {

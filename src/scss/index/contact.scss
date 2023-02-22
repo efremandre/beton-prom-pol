@@ -10,8 +10,6 @@
 .contact {
   @include mix.displayFlex(flex, center, center);
   min-height: 80vh;
-  color: var.$lightColor;
-  background: #fff url('../../assets/images/bg-contacts.jpg') center center / cover no-repeat;
   @media (any-hover: hover) {
     background-attachment: fixed;
   }
@@ -24,7 +22,6 @@
 
   &__title {
     margin-bottom: 1em;
-    color: var.$lightColor;
   }
 
   &__contact-block {
