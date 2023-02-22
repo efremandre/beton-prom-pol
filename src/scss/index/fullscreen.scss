@@ -7,10 +7,6 @@
   position: relative;
 }
 
-.container__row {
-
-}
-
 .fullscreen {
   @include mix.displayFlex(flex, start, center);
   min-height: 100vh;
