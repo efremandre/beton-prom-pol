@@ -1021,7 +1021,7 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   font-style: normal;
 }
-.burger:before, .burger:after, .whyme__label:before, .whyme__label:after, .about-us__label:before, .about-us__label:after, .nav__link:before, .phone__link:after, .subtitle:before, .form-preloader, .form-preloader:before {
+.burger:before, .burger:after, .whyme__label:before, .whyme__label:after, .about-us__label:before, .about-us__label:after, .nav__link:before, .phone__link:after, .social__phone-link:after, .subtitle:before, .form-preloader, .form-preloader:before {
   position: absolute;
   content: "";
 }
@@ -1418,6 +1418,9 @@ a:focus {
   align-items: center;
   gap: 10px;
 }
+.social__item {
+  color: #010101;
+}
 .social__link {
   display: flex;
   justify-content: center;
@@ -1425,7 +1428,6 @@ a:focus {
   width: 2em;
   height: 2em;
   border-radius: 5px;
-  color: #F5F5F5;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 @media (any-hover: hover) {
@@ -1442,6 +1444,34 @@ a:focus {
 }
 .social__link > img {
   max-width: 100%;
+}
+.social__phone > a {
+  color: #010101;
+}
+.social__phone-link {
+  position: relative;
+  display: block;
+  padding-left: 2em;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5em;
+  transition: text-decoration 0.8s ease;
+}
+.social__phone-link:after {
+  top: calc(50% - 0.9em);
+  left: 0;
+  width: 1.8em;
+  height: 1.8em;
+  background: url("../assets/images/icon/phone-black.svg") center center/contain no-repeat;
+}
+@media (any-hover: hover) {
+  .social__phone-link:hover {
+    text-decoration: underline;
+  }
+}
+.social__label {
+  font-size: calc(12px + 4 * ((100vw - 320px) / 1200));
+  line-height: 1em;
 }
 
 .logo {
@@ -1812,8 +1842,7 @@ a:focus {
 .whyme__wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
+  grid-gap: 0;
 }
 .whyme__title {
   margin-bottom: 2em;
@@ -1826,7 +1855,7 @@ a:focus {
 .whyme__container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 50px;
+  grid-gap: 30px;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;

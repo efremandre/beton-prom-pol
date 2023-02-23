@@ -8,12 +8,15 @@
     gap: 10px
   }
 
+  &__item {
+    color: var.$generalColorText;
+  }
+
   &__link {
     @include mix.displayFlex(flex, center, center);
     width: 2em;
     height: 2em;
     border-radius: 5px;
-    color: var.$lightColor;
     transition: transform .3s ease, box-shadow .3s ease;
 
     @media (any-hover: hover) {
@@ -34,5 +37,41 @@
     &>img {
       max-width: 100%;
     }
+  }
+
+  &__phone {
+    &>a {
+      color: var.$darkColor;
+    }
+  }
+
+  &__phone-link {
+    position: relative;
+    display: block;
+    padding-left: 2em;
+    font-weight: 400;
+    font-size: #{var.$generalTextSize} + px;
+    line-height: var.$generalLineHeight;
+    transition: text-decoration .8s ease;
+
+    &:after {
+      @extend %pseudoElement;
+      top: calc(50% - (1.8em / 2));
+      left: 0;
+      width: 1.8em;
+      height: 1.8em;
+      background: url('../../assets/images/icon/phone-black.svg') center center / contain no-repeat;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__label {
+    @include mix.adaptivFont(16, 12);
+    line-height: 1em;
   }
 }
