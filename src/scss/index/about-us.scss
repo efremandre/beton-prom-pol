@@ -1,0 +1,90 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.about-us {
+  color: var.$subColorText;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  &__title {
+    margin-bottom: 2em;
+    color: var.$subColorText;
+  }
+
+  &__body {
+    @include mix.displayFlex(flex, center, center);
+    padding: 2em 0;
+    background: #000000 url('../../assets/images/bg-block.jpg') center center / cover no-repeat;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    margin-bottom: 2em;
+    padding: 0 1em;
+    &>p {
+      margin-bottom: 1em;
+    }
+
+    &>ul {
+      margin-bottom: 1em;
+      padding-left: 1em;
+      list-style: disc;
+
+      &>li::marker {
+        color: var.$accentColor;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    @include mix.displayFlex(flex, center, center);
+    background-color: var.$accentColor;
+
+    &:before,
+    &:after {
+      @extend %pseudoElement;
+      width: 100%;
+      max-width: 120px;
+      height: 30px;
+    }
+
+    &:before {
+      top: 15px;
+      left: 15px;
+      background: url('../../assets/images/icon/points-top.svg') 0 0 / cover no-repeat;
+    }
+
+    &:after {
+      bottom: 15px;
+      right: 15px;
+      background: url('../../assets/images/icon/points-botton.svg') 0 0 / cover no-repeat;
+    }
+  }
+
+  &__label-content {
+    width: 80%;
+    @include mix.adaptivFont(26, 14);
+    line-height: 36px;
+    color: var.$generalColorText;
+  }
+
+  &__button {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+
+

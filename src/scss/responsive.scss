@@ -54,6 +54,32 @@
       }
     }
   }
+  
+  .about-us {
+    color: var.$subColorText;
+
+    &__wrapper {
+      display: block;
+    }
+
+    &__title {
+    
+    }
+
+    &__body {
+    }
+
+    &__container {
+    }
+
+    &__content {
+   
+    }
+
+    &__label {
+      display: none;
+    }
+  }
 
   .contact {
 
