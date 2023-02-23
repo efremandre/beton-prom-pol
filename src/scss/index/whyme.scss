@@ -8,8 +8,8 @@
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
   }
 
   &__title {
@@ -18,12 +18,14 @@
   }
 
   &__body {
-    @include mix.displayFlex(flex, center, center);
-    padding: 2em 0;
+    padding: 3em 0;
     background: #000000 url('../../assets/images/bg-block.jpg') center center / cover no-repeat;
   }
 
   &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 50px;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
@@ -32,7 +34,7 @@
   &__label {
     position: relative;
     @include mix.displayFlex(flex, center, center);
-    background-color: var.$accentColor;
+    background: var.$accentColor;
 
     &:before,
     &:after {
@@ -62,9 +64,58 @@
     color: var.$generalColorText;
   }
 
+  &__button-wrapper {
+    margin-top: 1em;
+  }
+
   &__button {
-    max-width: 300px;
     margin: 0 auto;
+  }
+}
+
+.card-whyme {
+  padding: 10px;
+  @include mix.displayFlex(flex, center, center);
+  flex-direction: column;
+
+  @media (any-hover: hover) {
+    &:hover {
+      animation: jump .5s ease-in-out;
+    }
+  }
+
+  &__icon-wrapper {
+    padding: 10px;
+    @include mix.displayFlex(flex, center, center);
+
+    &>img {
+      object-fit: cover;
+    }
+  }
+
+  &__text-block {
+    @include mix.displayFlex(flex, center, center);
+    height: 100%;
+    flex: 1 1 auto;
+    padding: 10px;
+
+    &>p {
+      text-align: center;
+    }
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 

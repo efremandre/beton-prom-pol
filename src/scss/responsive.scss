@@ -56,14 +56,52 @@
   }
   
   .about-us {
-    color: var.$subColorText;
+    &__title {
+      margin-bottom: 1em;
+    }
 
     &__wrapper {
       display: block;
     }
 
+    &__body {
+      padding: 1.3em 0;
+    }
+
+    &__content {
+      margin-bottom: 1em;
+    }
+
     &__label {
       display: none;
+    }
+  }
+
+  .service {
+    padding: 1.3em 0;
+  }
+
+  .whyme {
+    &__wrapper {
+      display: block;
+    }
+
+    &__body {
+      padding: 1.3em 0;
+    }
+
+    &__container {
+      grid-gap: 10px;
+    }
+
+    &__label {
+      display: none;
+    }
+  }
+
+  .card-whyme {
+    &__icon-wrapper {
+      padding: 0;
     }
   }
 
@@ -116,11 +154,12 @@
       margin-bottom: 0;
       padding: 0;
       grid-template-columns: 1fr;
-      grid-gap: 20px 40px;
+      grid-gap: 10px;
     }
   }
 
   .contact {
+    padding: 1em 0;
     &__map {
       height: 400px;
     }

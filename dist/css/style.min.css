@@ -1812,21 +1812,21 @@ a:focus {
 .whyme__wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
 }
 .whyme__title {
   margin-bottom: 2em;
   color: #F5F5F5;
 }
 .whyme__body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2em 0;
+  padding: 3em 0;
   background: #000000 url("../assets/images/bg-block.jpg") center center/cover no-repeat;
 }
 .whyme__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 50px;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -1836,7 +1836,7 @@ a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFC32A;
+  background: #FFC32A;
 }
 .whyme__label:before, .whyme__label:after {
   width: 100%;
@@ -1859,11 +1859,57 @@ a:focus {
   line-height: 36px;
   color: #010101;
 }
+.whyme__button-wrapper {
+  margin-top: 1em;
+}
 .whyme__button {
-  max-width: 300px;
   margin: 0 auto;
 }
 
+.card-whyme {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (any-hover: hover) {
+  .card-whyme:hover {
+    animation: jump 0.5s ease-in-out;
+  }
+}
+.card-whyme__icon-wrapper {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-whyme__icon-wrapper > img {
+  object-fit: cover;
+}
+.card-whyme__text-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: 1 1 auto;
+  padding: 10px;
+}
+.card-whyme__text-block > p {
+  text-align: center;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .main__contact {
   padding: 1.7em 0;
 }
@@ -2123,14 +2169,38 @@ a:focus {
   .phone__link {
     font-size: 14px;
   }
-  .about-us {
-    color: #F5F5F5;
+  .about-us__title {
+    margin-bottom: 1em;
   }
   .about-us__wrapper {
     display: block;
   }
+  .about-us__body {
+    padding: 1.3em 0;
+  }
+  .about-us__content {
+    margin-bottom: 1em;
+  }
   .about-us__label {
     display: none;
+  }
+  .service {
+    padding: 1.3em 0;
+  }
+  .whyme__wrapper {
+    display: block;
+  }
+  .whyme__body {
+    padding: 1.3em 0;
+  }
+  .whyme__container {
+    grid-gap: 10px;
+  }
+  .whyme__label {
+    display: none;
+  }
+  .card-whyme__icon-wrapper {
+    padding: 0;
   }
   .contact__wrapper {
     flex-wrap: wrap;
@@ -2165,7 +2235,10 @@ a:focus {
     margin-bottom: 0;
     padding: 0;
     grid-template-columns: 1fr;
-    grid-gap: 20px 40px;
+    grid-gap: 10px;
+  }
+  .contact {
+    padding: 1em 0;
   }
   .contact__map {
     height: 400px;
