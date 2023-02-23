@@ -1,6 +1,7 @@
 'use strict';
 export function burger() {
 	const burger = document?.querySelector('[data-burger]');
+	const header = document?.querySelector('[data-header]');
 	const nav = document?.querySelector('[data-nav]');
 	const navItems = nav?.querySelectorAll('.nav__link');
 	const body = document.body;
@@ -8,6 +9,7 @@ export function burger() {
 	const height = document.documentElement.clientHeight;
 
 	burger?.addEventListener('click', () => {
+		header?.classList.remove('animation-top');
 		body.classList.toggle('stop-scroll');
 		burger?.classList.toggle('_active');
 		nav?.classList.toggle('_nav-active');

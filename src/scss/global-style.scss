@@ -16,6 +16,10 @@ body {
 	scroll-behavior: smooth;
 }
 
+*  {
+	box-sizing: border-box;
+}
+
 * img {
 	display: block;
 	max-width: 100%;

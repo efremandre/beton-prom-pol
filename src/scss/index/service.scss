@@ -1,0 +1,75 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+@use '../modules/button-dawn';
+
+.main__service {
+  padding: 2em 0;
+}
+
+.service {
+  &__title {
+    margin-bottom: 4em;
+  }
+
+  &__wrapper {
+    display: grid;
+    margin-bottom: 4em;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-auto-rows: 80px;
+    grid-gap: 20px 40px;
+  }
+}
+
+.card-service {
+  @include mix.displayFlex(flex, space-between, center);
+  overflow: hidden;
+  box-shadow: 3px 3px 8px rgba(75, 75, 75, 0.25);
+  border-radius: 5px;
+
+  @media (any-hover: hover) {
+      &:hover {
+        animation: jump .5s ease-in-out;
+      }
+  }
+
+  &__icon-wrapper {
+    flex: 0 0 20%;
+    height: 100%;
+    padding: 10px;
+    @include mix.displayFlex(flex, center, center);
+    background-color: #444854;
+
+    &>img {
+      object-fit: cover;
+    }
+  }
+
+  &__text-block {
+    @include mix.displayFlex(flex, center, center);
+    height: 100%;
+    flex: 1 1 auto;
+    padding: 10px;
+    
+    &>p {
+      text-align: center;
+    }
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
