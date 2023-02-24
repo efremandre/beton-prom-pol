@@ -1,35 +1,41 @@
 <section id="contact" class="main__contact contact">
     <div class="container">
-        <div class="contact__row">
-            <div class="subtitle-wrapper animation">
-                <h2 class="contact__title subtitle">Контакты</h2>
-            </div>
-            <div class="contact__wrapper">
-                <div class="contact__contact-block animation-right">
-                    <p class="contact__contact-description">Свяжитесь с нами или оставьте свои контакты и мы перезвоним.</p>
-                    <div class="contact__social social">
-                        <ul class="social__list">
-                            <li>
-                                <a class="social__item" href="https://wa.me/79654556301" title="PromBetonPol WhatsApp">
-                                    <span class="social__link social__link_wa"><img src="../../assets/images/icon/wa.svg" alt="WhatsApp"></span>
-                                    <span class="social__label">Написать<br>в WhatsApp</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="social__item" href="#" title="PromBetonPol Telegram">
-                                    <span class="social__link social__link_vk">
+        <div class="subtitle-wrapper animation">
+            <h2 class="contact__title subtitle">Связаться с нами</h2>
+        </div>
+        <div class="contact__description">
+            <p>Воспользуйтесь контактными данными или оставьте Ваш номер телефона и мы перезвоним</p>
+        </div>
+        <div class="contact__wrapper">
+            <div class="contact__contact-item contact-item animation-right">
+                    <ul class="contact-item__list">
+                        <li>
+                            <a class="contact-item__item" href="tel:+79654556301" title="Телефон PromAgroPol">
+                                <span class="contact-item__image contact-item__image_phone">
+                                    <img src="../../assets/images/icon/phone-black.svg" alt="Phone">
+                                </span>
+                                <span class="contact-item__label">+7(965) 455 63 01</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="contact-item__item" href="https://wa.me/79654556301" title="PromAgroPol WhatsApp">
+                                <span class="contact-item__image contact-item__image_wa">
+                                    <img src="../../assets/images/icon/wa.svg" alt="WhatsApp">
+                                </span>
+                                <span class="contact-item__label">Мы в WhatsApp</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="contact-item__item" href="#" title="PromAgroPol Telegram">
+                                    <span class="contact-item__image contact-item__image_vk">
                                         <img src="../../assets/images/icon/tg.svg" alt="Telegram">
                                     </span>
-                                    <span class="social__label">Написать<br>в Telegram</span>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="social__phone">
-                                    <a href="tel:+79654556301" class="social__phone-link" title="Телефон PromBetonPol">+7(965) 455 63 01</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                                <span class="contact-item__label">Мы в Telegram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            <div class="contact__contact-block animation-left">
                     <div class="contact__form-container form-container">
                         <div class="form-preloader"></div>
                         <form class="ajax-contact-form contact__form form" action="#">
@@ -39,21 +45,11 @@
                             <div class="form__input">
                                 <input id="tel" type="tel" name="tel" placeholder="Ваш телефон" required data-phone-pattern>
                             </div>
-                            <div class="form__check">
-                                <input id="checkPersonal" name="privacy" type="checkbox" checked required>
-                                <label for="checkPersonal">Подтверждаю согласие на <a title="Политика конфиденциальности" target="_blank" href="../../privacy.html">обработку персональных данных</a></label>
-                            </div>
-                            <div class="form__input">
-                                <textarea id="message" name="message" cols="40" rows="3" class="message" placeholder="Сообщение..."></textarea>
-                            </div>
                             <button class="contact__button button button_accent">Отправить</button>
+                            <p>Соглашаюсь <a title="Политика конфиденциальности" target="_blank" href="../../privacy.html">с обработкой персональных данных</a></p>
                         </form>
                     </div>
                 </div>
-                <div class="contact__map-block animation-left">
-                    <img src="../../assets/images/map.jpg" alt="#">
-                </div>
-            </div>
         </div>
     </div>
     <div class="form-callback"></div>

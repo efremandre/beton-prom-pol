@@ -8,8 +8,7 @@
   &__wrapper {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-gap: 0;
   }
 
   &__title {
@@ -20,7 +19,7 @@
   &__body {
     @include mix.displayFlex(flex, center, center);
     padding: 2em 0;
-    background: #000000 url('../../assets/images/bg-block.jpg') center center / cover no-repeat;
+    background: #000000 url('../../assets/images/bg-block.jpg') center center / cover no-repeat fixed;
   }
 
   &__container {

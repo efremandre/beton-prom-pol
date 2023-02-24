@@ -8,20 +8,26 @@
 }
 
 .contact {
-  @include mix.displayFlex(flex, center, center);
-  min-height: 80vh;
+  color: var.$lightColor;
+  background: #000 url('../../assets/images/bg-block.jpg') center center / cover no-repeat;
   @media (any-hover: hover) {
     background-attachment: fixed;
   }
 
   &__wrapper {
-    @include mix.displayFlex(flex, start, center);
+    @include mix.displayFlex(flex, start, start);
     margin: 0 -1em;
     flex-wrap: unset;
   }
 
   &__title {
+    color: var.$lightColor;
     margin-bottom: 1em;
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: 1.2em;
   }
 
   &__contact-block {
@@ -36,43 +42,79 @@
     margin-bottom: 15px;
   }
 
-  &__social {
-    margin-bottom: 20px;
+  &__contact-item {
+    flex: 0 1 50%;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 1em auto;
+    padding: 0 1em;
   }
 
   &__list {
     @include mix.displayFlex(flex, start, center);
   }
 
-  &__map-block {
-    flex: 0 1 50%;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 10px;
-    padding: 0 1em;
-  }
-
   &__button {
     max-width: 100%;
-    margin-bottom: 1em;
-  }
-
-  &__map {
-    display: block;
-    width: 100%;
-    box-shadow: 0 4px 10px 0 rgba(80, 80, 80, 0.2);
+    margin-bottom: .5em;
   }
 }
 
-.social__item {
-  @include mix.displayFlex(flex, start, center);
-  margin-right: 20px;
-  gap: 10px;
-  &:last-child {
-    margin-right: 0;
+.contact-item {
+  &__list {
+    @include mix.displayFlex(flex, center, start);
+    height: 100%;
+    flex-direction: column;
+    gap: 1.5em;
   }
-  &>p {
-    @include mix.adaptivFont(14, 8);
-    line-height: 1.1em;
+
+  &__list_contact {
+    flex-direction: column;
+  }
+
+  &__item {
+    @include mix.displayFlex(flex, start, center);
+    gap: 1.5em;
+    color: var.$lightColor;
+  }
+
+  &__image {
+    @include mix.displayFlex(flex, center, center);
+    width: 3em;
+    height: 3em;
+    border-radius: 5px;
+    transition: transform .3s ease, box-shadow .3s ease;
+
+    &>img {
+      width: 50%;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 1px 10px 11px -4px rgba(1, 1, 1, 0.6);
+      }
+    }
+
+    &_phone {
+      background-color: var.$accentColor;
+    }
+
+    &_vk {
+      background-color: #3648FF;
+    }
+
+    &_wa {
+      background-color: #00FC75;
+    }
+
+    &>img {
+      max-width: 100%;
+    }
+  }
+
+  &__label {
+    @include mix.adaptivFont(18, 14);
+    line-height: 1em;
   }
 }

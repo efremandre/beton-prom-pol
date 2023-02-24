@@ -72,21 +72,23 @@
 }
 
 .form {
-  &__check {
-    &>input,
-    &>label {
-      @media (any-hover: hover) {
-        &:hover {
-          cursor: pointer;
-        }
+  &>p {
+    color: var.$lightColor;
+    @include mix.adaptivFont(14, 10);
+    text-align: center;
+
+    &>a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
       }
     }
+
   }
 
   &__input {
     position: relative;
-    &>input,
-    &>textarea {
+    &>input {
       width: 100%;
       margin-bottom: 1em;
       padding: 1em;
@@ -110,28 +112,14 @@
 
       &:focus {
         transform: translateY(-1px);
-        box-shadow: 1px 10px 11px -4px rgba(1, 1, 1, 0.6);
+        box-shadow: 1px 4px 11px -4px rgba(255, 255, 255, 0.4);
       }
 
       @media (any-hover: hover) {
         &:hover {
           transform: translateY(-1px);
-          box-shadow: 1px 10px 11px -4px rgba(1, 1, 1, 0.6);
+          box-shadow: 1px 4px 11px -4px rgba(255, 255, 255, 0.4);
         }
-      }
-    }
-
-    &>textarea {
-      resize: none;
-    }
-  }
-
-  &__check {
-    @include mix.adaptivFont(14, 10);
-    &>label>a {
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
       }
     }
   }

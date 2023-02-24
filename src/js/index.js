@@ -5,8 +5,8 @@ import { animationScroll } from "./modules/_animationScroll.js";
 import { scrollHeader } from "./modules/_scrollHeader.js";
 import { pressDawn } from "./modules/_pressDawn.js";
 import { pressUp } from "./modules/_pressUp.js";
-import { catalog } from "./modules/_catalog.js";
 import { sendForm } from "./modules/_form.js";
+import {slideBgHero} from "./modules/_slideBgHero.js";
 
 hello();
 burger();
@@ -15,5 +15,5 @@ animationScroll();
 scrollHeader();
 pressDawn();
 pressUp();
-catalog();
 sendForm();
+slideBgHero();

@@ -104,22 +104,6 @@
       padding: 0;
     }
   }
-
-  .contact {
-
-    &__wrapper {
-      flex-wrap: wrap;
-    }
-
-    &__contact-block {
-      flex: 0 1 100%;
-    }
-
-    &__map-block {
-      flex: 0 1 100%;
-      margin-bottom: 20px;
-    }
-  }
 }
 
 @media screen and (max-width: 569.98px) {
@@ -160,8 +144,24 @@
 
   .contact {
     padding: 1em 0;
-    &__map {
-      height: 400px;
+    &__wrapper {
+      flex-wrap: wrap-reverse;
+    }
+
+    &__contact-block {
+      flex: 0 1 60%;
+      margin-bottom: 1em;
+    }
+  }
+
+  .contact-item {
+    &__list {
+      flex-direction: row;
+      gap: 3em;
+    }
+
+    &__label {
+      display: none;
     }
   }
 }
@@ -186,6 +186,12 @@
       padding: 0;
       grid-template-columns: 1fr;
       grid-gap: 20px 40px;
+    }
+  }
+
+  .contact {
+    &__contact-block {
+      flex: 0 1 100%;
     }
   }
 }

@@ -8,6 +8,10 @@
     gap: 10px
   }
 
+  &__list_contact {
+    flex-direction: column;
+  }
+
   &__item {
     color: var.$generalColorText;
   }
@@ -24,6 +28,10 @@
         transform: translateY(-1px);
         box-shadow: 1px 10px 11px -4px rgba(1, 1, 1, 0.6);
       }
+    }
+
+    &_phone {
+      background-color: var.$accentColor;
     }
 
     &_vk {
