@@ -14,6 +14,11 @@
     background-attachment: fixed;
   }
 
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
   &__wrapper {
     @include mix.displayFlex(flex, start, start);
     margin: 0 -1em;

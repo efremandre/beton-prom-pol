@@ -1946,6 +1946,23 @@ a:focus {
     transform: translateY(0);
   }
 }
+.map {
+  position: relative;
+}
+.map__subtitle-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.map__title {
+  color: #010101;
+}
+.map__body {
+  min-height: 60vh;
+}
+
 .main__contact {
   padding: 1.7em 0;
 }
@@ -1958,6 +1975,10 @@ a:focus {
   .contact {
     background-attachment: fixed;
   }
+}
+.contact__container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 .contact__wrapper {
   display: flex;
