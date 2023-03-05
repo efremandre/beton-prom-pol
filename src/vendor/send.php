@@ -3,14 +3,11 @@ $name = $_POST['name'];
 $name = str_replace(['(',')','{','}','[', ']', '+', '=', '$', '_', '<', '>', '/', '/\/'], '', $name );
 $phone = $_POST['tel'];
 $phone = str_replace(['(',')','-','+',' '], '', $phone );
-$message = $_POST['message'];
-$message = str_replace(['(',')','{','}','[', ']', '+', '=', '$', '_', '<', '>', '/', '/\/'], '', $message );
-$token = "";
-$chat_id = "";
+$token = "6160359415:AAEN0kyL70TtIdvSpJzzWtOs-2MR0ncep3w";
+$chat_id = "-719392759";
 $arr = array(
     'Имя пользователя: ' => $name,
-    'Телефон: ' => $phone,
-    'Сообщение: ' => $message
+    'Телефон: ' => $phone
 );
 
 foreach($arr as $key => $value) {

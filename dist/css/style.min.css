@@ -1654,7 +1654,7 @@ a:focus {
   justify-content: start;
   align-items: center;
   min-height: 100vh;
-  background: #ccc url("../assets/images/bg-hero1.jpg") center/cover no-repeat;
+  background: #000 url("../assets/images/bg-hero1.jpg") center/cover no-repeat;
   transition: background-image 1s ease-in-out;
 }
 @media (any-hover: hover) {

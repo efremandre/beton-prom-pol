@@ -1,4 +1,2 @@
 User-agent: *
-Sitemap: https://siteame/sitemap.xml
-Disallow: /privacy/*.*
-Disallow: *.json
+Sitemap: https://https://promagropol.ru/sitemap.xml
